@@ -1,5 +1,5 @@
 <template>
-  <section class="text-gray-600 body-font">
+  <section class="text-gray-600 dark:text-gray-400 body-font dark:bg-gray-900">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1
@@ -22,7 +22,7 @@
               
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
               :alt="`${member.username} avatar`"
-              :src="member.avatar_url"  
+              :src="member.avatar_url"
               :title="member.username" @error="onImgError"
             />
             <div class="flex-grow">
