@@ -17,8 +17,7 @@ export default {
   name: 'Home',
   components: {
     Header,
-    // Members,
-    // ,HelloWorld
+    
   },
   data(){
     return {

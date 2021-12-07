@@ -5,8 +5,11 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span class="ml-3 text-xl collapsed-logo-name">TkTw</span>
-          <span class="ml-3 text-xl full-logo-name">Tikchbila Tiwliwla</span>
+          <div class="logo-name ">
+            <span class="ml-3 text-xl collapsed-logo-name">TkTw</span>
+            <span class="ml-3 text-xl full-logo-name">Tikchbila Tiwliwla</span>
+          </div>
+
         </a>
         <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
           <router-link to="/" class="mr-5 hover:text-gray-800 dark:hover:text-white ">Home</router-link>
@@ -49,28 +52,51 @@ export default {
     switchMode(){
       this.toggleMode = !this.toggleMode
       this.$emit('darkMode',this.toggleMode);
-    }
+    },
   }
 }
 </script>
 
 <style scoped>
 
-.full-logo-name{
-  display: none;
+.logo-name{
+  position:relative;
+  overflow: hidden;
 }
+
 .full-logo-name ,
-.nav-logo ,
 .collapsed-logo-name{
-  transition: all 2.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: all 0.3s ease-in-out;
+  display: block;
+  overflow: hidden;
 }
 
-.nav-logo:hover .collapsed-logo-name {
-  display: none;
+.ocollapsed-logo-name {
+  height: auto;
+  opacity: 1;
+  width: auto;
 }
 
-.nav-logo:hover .full-logo-name{
-  display: inline;
+.full-logo-name{
+  /* display: none; */
+   height: 0px;
+  opacity: 0;
+  width: 0px;
+}
+
+.logo-name:hover .collapsed-logo-name {
+  height: 0px;
+  opacity: 0;
+  width: 0px;
+
+  
+}
+
+.logo-name:hover .full-logo-name{
+  /* display: inline; */
+ height: auto;
+  opacity: 1;
+  width: auto;
 }
 
 
