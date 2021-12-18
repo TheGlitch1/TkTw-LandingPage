@@ -29,7 +29,7 @@
           heard of them.
         </p>
       </div>
-      <div class="flex flex-wrap -m-4">
+      <div class="flex flex-wrap m-4">
         <div
           class="p-4 lg:w-1/5"
           v-for="(member, j) in members.Guezar"
@@ -53,8 +53,8 @@
               class="
                 flex-shrink-0
                 rounded-lg
-                w-48
-                h-48
+                w-32
+                h-32
                 object-cover object-center
                 sm:mb-0
                 mb-4
@@ -63,7 +63,7 @@
               :title="member.username" @error="onImgError"
             />
             <div class="flex-grow sm:pl-8">
-              <h2 class="title-font font-medium text-lg text-white">
+              <h2 class="title-font font-medium text-lg dark:text-white">
                 {{ member.username }}
               </h2>
               <h3 class="text-gray-500 mb-3">
